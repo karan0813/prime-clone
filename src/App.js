@@ -11,7 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Home from './com/Home';
+import Home from './homecomp/Home';
 
 function App() {
   return (
