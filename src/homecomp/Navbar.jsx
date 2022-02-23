@@ -1,10 +1,35 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import Categories from './Categories'
+import { auth } from "../firebase"
+import { useDispatch } from 'react-redux';
+import { deletuser, selectuser } from "../features/user/userSlice"
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const history = useHistory()
+    const dispetch = useDispatch()
     const [enter, setenter] = useState(false)
     const [profile, setprofile] = useState(false)
     const [Catag, setCatag] = useState(false)
+
+    const signOut = () => {
+        //logout
+        auth.signOut().then(function () {
+
+            dispetch(deletuser({
+
+                username: null
+            }))
+
+
+
+            history.push("/")
+        }).catch(function (error) {
+            console.log("no");
+        });
+
+    }
 
 
     return (
@@ -75,7 +100,7 @@ const Navbar = () => {
                     <p className="text-gray-400 font-bold">Account & Settings</p>
                     <p className="text-gray-400 font-bold"> Watch Anywhere</p>
                     <p className="text-gray-400 font-bold">Help</p>
-                    <p className="text-gray-400 font-bold">Sign Out</p>
+                    <p className="text-gray-400 font-bold cursor-pointer" onClick={() => { signOut() }}>Sign Out</p>
 
                 </div>
                 <div className="border bg-slate-400 h-52 mt-5  z-50"></div>

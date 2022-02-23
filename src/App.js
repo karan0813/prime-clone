@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Channels from './com/Channels';
 import Navbar from './com/Navbar';
@@ -12,8 +12,35 @@ import {
   Link
 } from "react-router-dom";
 import Home from './homecomp/Home';
+import { auth } from './firebase';
+import { useDispatch } from 'react-redux';
+import {Adduser} from "./features/user/userSlice"
+
+
+
 
 function App() {
+  const dispetch = useDispatch()
+ 
+
+
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+
+      if (authUser) {
+         const username = authUser.email;
+        dispetch(Adduser({
+           username,
+        }))
+
+      } else {
+        dispetch(Adduser({
+          username:null
+        }))
+
+      }
+     })
+  }, [dispetch])
   return (
     <>
       <Router>

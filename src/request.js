@@ -1,4 +1,4 @@
-const API_KEY = "19f84e11932abbc79e6d83f82d6d1045";
+const API_KEY = "f85bf654bc8cb99e50817966ebcc62ac";
 
 
 
@@ -15,6 +15,6 @@ const request = {
 
 export default request;
 
-// //https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US
 
+// //https://api.themoviedb.org/3/discover/movie?api_key=f81980ff410r46f422d64ddf3a56dddd&language=en-US
 // https://api.themoviedb.org/3/movie/{movie_id}?api_key=19f84e11932abbc79e6d83f82d6d1045&language=en-US
