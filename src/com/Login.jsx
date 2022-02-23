@@ -33,7 +33,7 @@ const Login = () => {
                 <h1 className="mb-5 text-3xl">Sign In</h1>
                 <form className="flex flex-col ">
                     <label className=" font-bold text-sm">Email or mobile phone number</label>
-                    <input type="text" className="px-4 py-2 rounded-sm focus:outline-none mb-4" value={email} onChange={e => { setEmail(e.target.value) }} />
+                    <input type="text" className="px-4 py-2 rounded-sm focus:outline-none mb-4 border" value={email} onChange={e => { setEmail(e.target.value) }} />
                     <div className="flex justify-between items-center">
                         <label className=" font-bold text-sm">Password</label>
                         <a className="  text-sm text-blue-800"> Forget password ?</a>
