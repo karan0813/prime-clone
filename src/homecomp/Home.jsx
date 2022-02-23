@@ -74,13 +74,12 @@ const Home = () => {
             <Row tittle="Amazon Original series" fetchNetfilxOriginals={request.fetchTrending} />
             <Row tittle="Amazon Original series" fetchNetfilxOriginals={request.fetchActionMovies} />
             <Poster tittle="Subscribe to Channels" addposter={addposter} />
-
-
-
-
-
-
-
+            <Row tittle="Amazon Original Horror-series" fetchNetfilxOriginals={request.fetchHorrorMovies} />
+            <Row tittle="Amazon Original Romance-series" fetchNetfilxOriginals={request.fetchRomanceMovies} />
+            <Row tittle="Amazon Original Documentaries-series" fetchNetfilxOriginals={request.fetchDocumentaries} />
+            <footer className="h-32 w-full bg-[#202020] flex justify-center">
+                <img className="object-contain  w-40 h-20" src='https://logos-world.net/wp-content/uploads/2020/11/Google-Play-Logo-2015-2016.png' />
+            </footer>
         </div>
     )
 }

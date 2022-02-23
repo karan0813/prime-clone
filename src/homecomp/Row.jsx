@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from "../axios"
-import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 const Row = ({ fetchNetfilxOriginals, tittle, istrue, addposter }) => {
@@ -17,7 +16,10 @@ const Row = ({ fetchNetfilxOriginals, tittle, istrue, addposter }) => {
         fetchData();
     }, [fetchNetfilxOriginals]);
     return (<>
-        <h1 className="font-bold text-xl text-white mt-7 mx-3">{tittle}</h1>
+        <div className="flex text-center justify-start">
+            <h1 className="font-bold  text-white mt-7 mx-3 md:text-lg  text-md">{tittle} </h1>
+            <h2 className="bg-[#00A8E1] mt-7 px-4 py-1 rounded-md  font-semibold">Prime</h2>
+        </div>
 
         {istrue ?
 

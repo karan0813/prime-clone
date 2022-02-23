@@ -58,7 +58,7 @@ function App() {
 
           </div>
              <footer className="h-32 w-full bg-[#202020] flex justify-center">
-                <img className="object-contain  w-40 h-20" src='https://logodownload.org/wp-content/uploads/2018/07/prime-video-1.png'/>
+                <img className="object-contain  w-40 h-20" src='https://logos-world.net/wp-content/uploads/2020/11/Google-Play-Logo-2015-2016.png'/>
              </footer>
      
 
